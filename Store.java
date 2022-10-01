@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Store  {
+public class Store {
 
 	public static void main(String[] args) {
 		int age = 0;
@@ -17,17 +17,18 @@ public class Store  {
 				System.out.println("Isso nao e uma idade ");
 				numero = false;
 			}
-			if (age >= 18) {
-				System.out.println("Pode entrar " + age);
+			if (age >= 18 && age <= 125) {
+				System.out.println("Seja bem vindo! ");
 			} else if (age <= 17 && age > 0 && numero == true) {
 				System.out.println("Muito novo. Idade: " + age);
 			} else {
 				numero = true;
-				System.out.println("tente novamente");
+				System.out.println("Tente novamente.");
+
 			}
 		} // do
 
-		while (age < 18 || numero == false);
+		while (age < 18 || numero == false || age>125);
 
 	}
 
